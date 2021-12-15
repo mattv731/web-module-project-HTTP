@@ -33,7 +33,6 @@ const EditMovieForm = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-		console.log(id)
         axios.put(`http://localhost:9000/api/movies/${id}`, movie)
             .then(res=>{
                 setMovies(res.data);
